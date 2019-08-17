@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="1101.0" type="BorderPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inscriptionController">
+   <top>
+      <AnchorPane fx:id="ap1" prefHeight="74.0" prefWidth="791.0" style="-fx-background-color: #093264;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="l2" layoutX="345.0" layoutY="32.0" style="-fx-text-fill: white;" text="Classe" />
+            <ComboBox fx:id="classe" layoutX="388.0" layoutY="28.0" prefWidth="150.0" style="-fx-background-color: white;" styleClass="bac" AnchorPane.topAnchor="28.0" />
+            <AnchorPane fx:id="nonpaye" layoutX="24.0" layoutY="22.0" onMouseClicked="#nonPaye" prefHeight="34.0" prefWidth="275.0" style="-fx-background-color: #EEEEEF;">
+               <children>
+                  <Label fx:id="l1" layoutX="97.0" layoutY="12.0" scaleX="1.7" scaleY="1.7" style="font: black;" text="ne sont pas en règle" />
+                  <Label fx:id="regle" layoutX="29.0" layoutY="3.0" prefHeight="34.0" prefWidth="15.0" scaleX="3.0" scaleY="3.0" style="-fx-text-fill: red;" text="23" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="626.0" layoutY="20.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="105.0" styleClass="bou" text="Button" />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="630.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane fx:id="ap2" prefHeight="101.0" prefWidth="1101.0" style="-fx-background-color: #093264;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="l3" layoutX="14.0" layoutY="21.0" style="-fx-text-fill: white;" text="Cherchez" />
+            <TextField fx:id="chercher" layoutX="77.0" layoutY="17.0" onInputMethodTextChanged="#textChanged" prefHeight="25.0" prefWidth="384.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <ListView fx:id="lv" prefHeight="276.0" prefWidth="1101.0" BorderPane.alignment="CENTER" />
+   </center>
+</fx:root>
